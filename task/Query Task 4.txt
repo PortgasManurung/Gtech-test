@@ -1,0 +1,3 @@
+SELECT Distinct(u.username) FROM user as u 
+JOIN login_history as lh ON u.id = lh.id_user 
+WHERE lh.login_time >= DATE(NOW() - INTERVAL 7 DAY)
